@@ -14,3 +14,7 @@ docker service ps <service name>
 docker exec -it <container name of service> bash
 # log status of container
 docker logs <container name>
+# delete secret in service
+docker service update --secret-rm <secret name> <service name>
+# add secret to service
+docker service update --secret-add <secret name> <service name>
